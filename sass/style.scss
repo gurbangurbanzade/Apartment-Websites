@@ -93,7 +93,6 @@ body {
   .page__right {
     margin-left: 23rem;
     width: 77rem;
-    border-bottom: 0.1rem solid #ccc;
 
     .page__right__container {
       @include column;
@@ -179,6 +178,49 @@ body {
         }
         .page__right__main__rules {
           border: none;
+        }
+      }
+    }
+
+    .page__right__footer {
+      border-top: 0.05rem solid #eee;
+      .page__right__container {
+        @include column;
+        .page__right__footer__textHeader {
+          font-size: 3rem;
+          margin: 2rem 0rem;
+        }
+        .page__right__footer__textContact {
+          margin-bottom: 0.5rem;
+          i {
+            margin-right: 1.6rem;
+          }
+        }
+        form {
+          margin: 1.5rem 0;
+          @include column;
+          span {
+            margin-bottom: 1.6rem;
+          }
+          input {
+            margin-bottom: 1.4rem;
+            padding: 1rem 0.8rem;
+            border: 0.1rem solid #ccc;
+          }
+          .page__right__main__BTN {
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            width: 33.33%;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.5rem;
+            padding: 1rem 1.6rem;
+            margin-bottom: 1rem;
+            &:hover {
+              background-color: #ccc;
+              color: black;
+            }
+          }
         }
       }
     }
