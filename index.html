@@ -4,70 +4,181 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Raleway Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End Raleway Font -->
+    <!-- CSS file -->
+    <link rel="stylesheet" href="sass/style.css" />
     <title>Document</title>
   </head>
   <body>
     <!-- Home Page -->
-    <section id="page ">
+    <section class="page">
       <!-- Left Side -->
-      <div class="page__left"></div>
+      <div class="page__left">
+        <div class="page__left__header">
+          <span class="page__left__header__text">Rental</span>
+          <span class="page__left__header__text">from $99</span>
+
+          <span class="page__left__header__info">per night</span>
+        </div>
+        <div class="page__left__form">
+          <form action="">
+            <div>
+              <label for=""
+                ><i class="fa-regular fa-calendar-check"></i> Check in</label
+              >
+              <input type="text" placeholder=" DD MM YY" />
+            </div>
+            <div>
+              <label for=""
+                ><i class="fa-regular fa-calendar"></i> Check Out</label
+              >
+              <input type="text" placeholder=" DD MM YY" />
+            </div>
+            <div>
+              <label for=""><i class="fa-solid fa-person"></i> Adults</label>
+              <input type="number" value="1" />
+            </div>
+            <div>
+              <label for=""
+                ><i class="fa-solid fa-child-reaching"></i> Kids</label
+              >
+              <input type="number" value="0" />
+            </div>
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i> Search availability
+            </button>
+          </form>
+        </div>
+        <div class="page__left__footer">
+          <span><i class="fa-solid fa-building"></i> Apartment</span>
+          <span><i class="fa-solid fa-rss"></i> Subscribe</span>
+          <span><i class="fa-solid fa-envelope"></i> Contact</span>
+        </div>
+      </div>
       <!-- End Left Side -->
       <!-- Right Side -->
       <div class="page__right">
-        <div class="page__right__header">
-          <span>The Apartment</span>
-          <div></div>
-          <div></div>
+        <div class="page__right__container">
+          <div class="page__right__header">
+            <span>The Apartment</span>
+            <div class="page__right__header__photoUp">
+              <img src="image/livingroom.jpg" alt="" />
+            </div>
+            <div class="page__right__header__photoDown">
+              <div>
+                <img src="image/livingroom.jpg" alt="" />
+              </div>
+              <div>
+                <img src="image/diningroom.jpg" alt="" />
+              </div>
+              <div>
+                <img src="image/bedroom.jpg" alt="" />
+              </div>
+              <div>
+                <img src="image/livingroom2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="page__right__main">
+            <div class="page__right__main__space">
+              <div>
+                <span class="page__right__main__space__textHeader"
+                  >The space</span
+                >
+              </div>
+              <div class="page__right__main__space__textBox">
+                <span><i class="fa-solid fa-person"></i> Max people: 4</span>
+                <span>
+                  <i class="fa-regular fa-clock"></i> Check In: After 3PM
+                </span>
+                <span><i class="fa-solid fa-bath"></i> Bathrooms: 2</span>
+                <span><i class="fa-regular fa-clock"></i> Check Out: 12PM</span>
+                <span><i class="fa-solid fa-bed"></i> Bedrooms: 1</span>
+              </div>
+            </div>
+            <div class="page__right__main__amenties">
+              <div>
+                <span class="page__right__main__amenties__textHeader"
+                  >Amenities</span
+                >
+              </div>
+              <div class="page__right__main__amenties__textBox">
+                <span><i class="fa-solid fa-shower"></i> Shower</span>
+                <span><i class="fa-solid fa-utensils"></i> Kitchen</span>
+                <span><i class="fa-solid fa-wifi"></i> WiFi</span>
+                <span
+                  ><i class="fa-solid fa-temperature-three-quarters"></i>
+                  Heating</span
+                >
+                <span><i class="fa-solid fa-tv"></i> TV</span>
+                <span
+                  ><i class="fa-brands fa-accessible-icon"></i> Accessible</span
+                >
+              </div>
+            </div>
+            <div class="page__right__main__extraInfo">
+              <div>
+                <span class="page__right__main__extraInfo__textHeader"
+                  >Extra Info</span
+                >
+              </div>
+              <div class="page__right__main__extraInfo__textBox">
+                <span>
+                  Our apartment is really clean and we like to keep it that way.
+                  Enjoy the lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</span
+                >
+                <span>
+                  We accept:
+                  <i class="fa-solid fa-credit-card"></i>
+                  <i class="fa-brands fa-cc-mastercard"></i>
+                  <i class="fa-brands fa-cc-amex"></i>
+                  <i class="fa-brands fa-cc-paypal"></i>
+                </span>
+              </div>
+            </div>
+            <div class="page__right__main__rules">
+              <div>
+                <span class="page__right__main__rules__textHeader">Rules</span>
+              </div>
+              <div class="page__right__main__rules__textBox">
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.</span
+                >
+                <span>
+                  Subscribe to receive updates on available dates and special
+                  offers.</span
+                >
+                <button class="page__right__main__BTN">Subscribe</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="page__right__main">
-          <div>
-            <div>
-              <span>The space</span>
-            </div>
-            <div>
-              <span>Max people: 4</span>
-              <span> Check In: After 3PM</span>
-              <span>Bathrooms: 2</span>
-              <span> Check Out: 12PM</span>
-              <span> Bedrooms: 1</span>
-            </div>
-          </div>
-          <hr />
-          <div>
-            <div>
-              <span>Amenities</span>
-            </div>
-            <div>
-              <span> Shower</span>
-              <span> Kitchen</span>
-              <span>WiFi</span>
-              <span> Heating</span>
-              <span> TV</span>
-              <span> Accessible</span>
-            </div>
-          </div>
-          <hr />
-          <div>
-            <div>
-              <span>Extra Info</span>
-            </div>
-            <div>
-              <span>
-                Our apartment is really clean and we like to keep it that way.
-                Enjoy the lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.</span
-              >
-            </div>
-            <div>
-              <span>We accept</span>
-            </div>
-          </div>
+        <div class="page__right__footer">
+          asdasd sdfldsjfafpafj[aof[oafm[amf[oamf[ao]]]]]
         </div>
       </div>
       <!-- End right Side -->
     </section>
     <!-- End Home Page -->
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/f1c0c87b9c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End Font Awesome -->
   </body>
 </html>
