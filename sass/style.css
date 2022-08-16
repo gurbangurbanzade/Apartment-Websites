@@ -5,6 +5,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
 * {
@@ -19,9 +20,13 @@ body {
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
 }
+.page .page__navbar {
+  display: none;
+}
 .page .page__left {
   position: fixed;
   background-color: #f1f1f1;
+  padding: 1rem 1.5rem;
   width: 23rem;
   height: 100vh;
 }
@@ -179,6 +184,7 @@ body {
 .page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox span,
 .page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox span {
   margin: 1.6rem 0rem;
+  width: 100%;
   display: block;
 }
 .page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox span i,
@@ -265,4 +271,39 @@ body {
 .page .page__right .page__right__footer .page__right__container form .page__right__main__BTN:hover {
   background-color: #ccc;
   color: black;
+}
+
+@media (max-width: 992px) {
+  .page {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .page .page__navbar {
+    display: block;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    color: white;
+    top: 0;
+    overflow: hidden;
+    padding: 1.3rem 0;
+  }
+  .page .page__navbar span {
+    margin-left: 1.6rem;
+    font-size: 2.4rem;
+  }
+  .page .page__navbar i {
+    font-size: 2.4rem;
+    margin-right: 1.6rem;
+  }
+  .page .page__left {
+    display: none;
+  }
+  .page .page__right {
+    width: 100%;
+    margin-left: 0rem;
+  }
 }/*# sourceMappingURL=style.css.map */
