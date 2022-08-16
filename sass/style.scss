@@ -19,52 +19,56 @@ body {
   margin: 0 auto;
   width: 100rem;
   display: flex;
-  border-right: 1px solid #ccc;
-  border-left: 1px solid #ccc;
+  border-right: 0.1rem solid #ccc;
+  border-left: 0.1rem solid #ccc;
   .page__navbar {
     display: none;
   }
   // Left side
   .page__left {
+    overflow-y: scroll;
     position: fixed;
-    // left: ;
     background-color: #f1f1f1;
-    padding: 1rem 1.5rem;
-    width: 23rem;
+    width: 26rem;
     height: 100vh;
     .page__left__header {
       @include column;
       margin-left: 1.5rem;
       .page__left__header__text {
         font-size: 2.4rem;
-        margin-top: 1.6rem;
+        margin-top: 2.6rem;
+      }
+      .page__left__header__textSecond {
+        font-size: 2.4rem;
+        margin-top: 1.8rem;
       }
       .page__left__header__info {
-        margin-top: 1.6rem;
+        margin-top: 1.7rem;
       }
     }
     .page__left__form {
-      margin: 4rem 1.5rem;
+      margin: 5rem 1.5rem 3rem 1.5rem;
 
       form {
         div {
           @include column;
-          margin-bottom: 1.5rem;
+          margin-bottom: 2.1rem;
           label {
             font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.6rem;
           }
           input {
             // height: 3rem;
             border: 0.1rem solid #ccc;
-            padding: 0.8rem;
+            padding: 1rem;
+            font-size: 1.5rem;
           }
         }
         button {
           color: white;
           background-color: #4caf50;
           border: none;
-          padding: 0.8rem 1.6rem;
+          padding: 1rem 1.6rem;
           width: 100%;
           text-align: left;
           font-family: "Raleway", sans-serif;
@@ -95,21 +99,29 @@ body {
   //-----------------------------
   // Right side
   .page__right {
-    margin-left: 23rem;
-    width: 77rem;
+    margin-left: 26rem;
+    width: 74rem;
 
     .page__right__container {
       @include column;
       margin: 1.5rem 1.5rem;
       .page__right__header {
         @include column;
-        span {
+        .page__right__header__text {
           color: #4caf50;
           font-size: 3rem;
           margin-bottom: 1.5rem;
         }
         .page__right__header__photoUp {
-          margin-bottom: 1.5rem;
+          position: relative;
+          margin-bottom: 1rem;
+          .page__right__header__photoUp__info {
+            position: absolute;
+            color: white;
+            bottom: 1.6rem;
+            background-color: black;
+            padding: 1.6rem 1rem;
+          }
           img {
             width: 100%;
           }
@@ -119,7 +131,7 @@ body {
           align-items: stretch;
           div {
             flex-grow: 1;
-            margin-right: 2rem;
+            margin-right: 1.5rem;
             img {
               width: 100%;
             }
@@ -210,6 +222,7 @@ body {
             margin-bottom: 1.4rem;
             padding: 1rem 0.8rem;
             border: 0.1rem solid #ccc;
+            font-size: 1.6rem;
           }
           .page__right__main__BTN {
             border: none;
@@ -219,11 +232,16 @@ body {
             font-family: "Raleway", sans-serif;
             font-size: 1.5rem;
             padding: 1rem 1.6rem;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
             &:hover {
               background-color: #ccc;
               color: black;
             }
+          }
+        }
+        span {
+          a {
+            color: black;
           }
         }
       }

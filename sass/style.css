@@ -17,17 +17,17 @@ body {
   margin: 0 auto;
   width: 100rem;
   display: flex;
-  border-right: 1px solid #ccc;
-  border-left: 1px solid #ccc;
+  border-right: 0.1rem solid #ccc;
+  border-left: 0.1rem solid #ccc;
 }
 .page .page__navbar {
   display: none;
 }
 .page .page__left {
+  overflow-y: scroll;
   position: fixed;
   background-color: #f1f1f1;
-  padding: 1rem 1.5rem;
-  width: 23rem;
+  width: 26rem;
   height: 100vh;
 }
 .page .page__left .page__left__header {
@@ -37,32 +37,37 @@ body {
 }
 .page .page__left .page__left__header .page__left__header__text {
   font-size: 2.4rem;
-  margin-top: 1.6rem;
+  margin-top: 2.6rem;
+}
+.page .page__left .page__left__header .page__left__header__textSecond {
+  font-size: 2.4rem;
+  margin-top: 1.8rem;
 }
 .page .page__left .page__left__header .page__left__header__info {
-  margin-top: 1.6rem;
+  margin-top: 1.7rem;
 }
 .page .page__left .page__left__form {
-  margin: 4rem 1.5rem;
+  margin: 5rem 1.5rem 3rem 1.5rem;
 }
 .page .page__left .page__left__form form div {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.1rem;
 }
 .page .page__left .page__left__form form div label {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
 }
 .page .page__left .page__left__form form div input {
   border: 0.1rem solid #ccc;
-  padding: 0.8rem;
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 .page .page__left .page__left__form form button {
   color: white;
   background-color: #4caf50;
   border: none;
-  padding: 0.8rem 1.6rem;
+  padding: 1rem 1.6rem;
   width: 100%;
   text-align: left;
   font-family: "Raleway", sans-serif;
@@ -88,8 +93,8 @@ body {
   background-color: #ccc;
 }
 .page .page__right {
-  margin-left: 23rem;
-  width: 77rem;
+  margin-left: 26rem;
+  width: 74rem;
 }
 .page .page__right .page__right__container {
   display: flex;
@@ -100,13 +105,21 @@ body {
   display: flex;
   flex-direction: column;
 }
-.page .page__right .page__right__container .page__right__header span {
+.page .page__right .page__right__container .page__right__header .page__right__header__text {
   color: #4caf50;
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 .page .page__right .page__right__container .page__right__header .page__right__header__photoUp {
-  margin-bottom: 1.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.page .page__right .page__right__container .page__right__header .page__right__header__photoUp .page__right__header__photoUp__info {
+  position: absolute;
+  color: white;
+  bottom: 1.6rem;
+  background-color: black;
+  padding: 1.6rem 1rem;
 }
 .page .page__right .page__right__container .page__right__header .page__right__header__photoUp img {
   width: 100%;
@@ -117,7 +130,7 @@ body {
 }
 .page .page__right .page__right__container .page__right__header .page__right__header__photoDown div {
   flex-grow: 1;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }
 .page .page__right .page__right__container .page__right__header .page__right__header__photoDown div img {
   width: 100%;
@@ -257,6 +270,7 @@ body {
   margin-bottom: 1.4rem;
   padding: 1rem 0.8rem;
   border: 0.1rem solid #ccc;
+  font-size: 1.6rem;
 }
 .page .page__right .page__right__footer .page__right__container form .page__right__main__BTN {
   border: none;
@@ -266,16 +280,19 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   padding: 1rem 1.6rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .page .page__right .page__right__footer .page__right__container form .page__right__main__BTN:hover {
   background-color: #ccc;
   color: black;
 }
+.page .page__right .page__right__footer .page__right__container span a {
+  color: black;
+}
 
 @media (max-width: 992px) {
   .page {
-    width: 100%;
+    width: auto;
     overflow-x: auto;
   }
   .page .page__navbar {
@@ -290,6 +307,7 @@ body {
     top: 0;
     overflow: hidden;
     padding: 1.3rem 0;
+    z-index: 1;
   }
   .page .page__navbar span {
     margin-left: 1.6rem;
@@ -305,5 +323,20 @@ body {
   .page .page__right {
     width: 100%;
     margin-left: 0rem;
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 600px) {
+  .page__right__main__BTN {
+    width: 100% !important;
+  }
+  .page__right__main__extraInfo__textBox,
+.page__right__main__rules__textBox {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .page__right__main__space__textBox span {
+    font-size: 1.6rem !important;
   }
 }/*# sourceMappingURL=style.css.map */
