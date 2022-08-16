@@ -1,3 +1,9 @@
+.checkText {
+  margin-top: 0.5rem;
+  color: red;
+  font-weight: bold;
+}
+
 html {
   font-size: 62.5%;
 }
