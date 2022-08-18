@@ -62,13 +62,13 @@
             </div>
             <div class="form__child">
               <label for=""><i class="fa-solid fa-person"></i> Adults</label>
-              <input type="number" value="1" />
+              <input type="number" value="1" min="1" />
             </div>
             <div class="form__child">
               <label for=""
                 ><i class="fa-solid fa-child-reaching"></i> Kids</label
               >
-              <input type="number" value="0" />
+              <input type="number" value="0" min="0" />
             </div>
             <button type="submit" class="searchBTN">
               <i class="fa-solid fa-magnifying-glass"></i> Search availability
@@ -89,22 +89,61 @@
             <span class="page__right__header__text">The Apartment</span>
             <div class="page__right__header__photoUp">
               <span class="page__right__header__photoUp__info">
-                Living Room</span
-              >
-              <img src="image/livingroom.jpg" alt="" />
+                Living Room
+              </span>
+              <div class="page__right__header__photoUp__box">
+                <img
+                  src="image/livingroom.jpg"
+                  alt="Living Room"
+                  style="display: block"
+                />
+
+                <img
+                  src="image/diningroom.jpg"
+                  alt="Dining Room"
+                  style="display: none"
+                />
+                <img
+                  src="image/diningroom.jpg"
+                  alt="Dining Room"
+                  style="display: none"
+                />
+                <img
+                  src="image/bedroom.jpg"
+                  alt="Bedroom"
+                  style="display: none"
+                />
+                <img
+                  src="image/livingroom2.jpg"
+                  alt="Living Room II"
+                  style="display: none"
+                />
+              </div>
             </div>
             <div class="page__right__header__photoDown">
               <div>
-                <img src="image/livingroom.jpg" alt="" />
+                <img
+                  src="image/livingroom.jpg"
+                  alt="Living Room"
+                  class="slide"
+                />
               </div>
               <div>
-                <img src="image/diningroom.jpg" alt="" />
+                <img
+                  src="image/diningroom.jpg"
+                  alt="Dining Room"
+                  class="slideHover"
+                />
               </div>
               <div>
-                <img src="image/bedroom.jpg" alt="" />
+                <img src="image/bedroom.jpg" alt="Bedroom" class="slideHover" />
               </div>
               <div>
-                <img src="image/livingroom2.jpg" alt="" />
+                <img
+                  src="image/livingroom2.jpg"
+                  alt="Living Room II"
+                  class="slideHover"
+                />
               </div>
             </div>
           </div>

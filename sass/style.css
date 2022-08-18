@@ -4,6 +4,17 @@
   font-weight: bold;
 }
 
+.slideHover {
+  filter: opacity(65%);
+}
+.slideHover:hover {
+  filter: opacity(100%);
+}
+
+.slide {
+  filter: opacity(100%);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -139,6 +150,7 @@ body {
   margin-right: 1.5rem;
 }
 .page .page__right .page__right__container .page__right__header .page__right__header__photoDown div img {
+  cursor: pointer;
   width: 100%;
 }
 .page .page__right .page__right__container .page__right__header .page__right__header__photoDown div:last-child {

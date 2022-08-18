@@ -177,3 +177,40 @@ function deleteError(e) {
 //   }
 // }
 // Check in/out input format check
+
+//--------------------------------------------------------------
+//Slider
+const photos = document.querySelector(
+  ".page__right__header__photoDown"
+).children;
+const homePhoto = document.querySelector(
+  ".page__right__header__photoUp__box"
+).children;
+const info = document.querySelector(".page__right__header__photoUp__info");
+for (let photo of photos) {
+  photo.addEventListener("click", function () {
+    for (let photo of photos) {
+      if (photo.children[0] !== this.children[0]) {
+        // photo.children[0].style.filter = "opacity(65%)";
+        photo.children[0].classList.remove("slide");
+        photo.children[0].classList.add("slideHover");
+      } else {
+        photo.children[0].classList.remove("slideHover");
+        photo.children[0].classList.add("slide");
+      }
+    }
+
+    for (let img of homePhoto) {
+      if (this.children[0].alt == img.alt) {
+        img.style.display = "block";
+        info.innerHTML = `${this.children[0].alt}`;
+      } else {
+        img.style.display = "none";
+      }
+    }
+  });
+}
+function myFunction(event) {
+  console.log();
+}
+//End Slider

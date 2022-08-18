@@ -8,3 +8,12 @@
   color: red;
   font-weight: bold;
 }
+.slideHover {
+  filter: opacity(65%);
+  &:hover {
+    filter: opacity(100%);
+  }
+}
+.slide {
+  filter: opacity(100%);
+}
