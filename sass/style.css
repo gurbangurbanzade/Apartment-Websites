@@ -15,6 +15,88 @@
   filter: opacity(100%);
 }
 
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-window div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 4rem;
+  background: white;
+}
+.modal-window div .modal-close {
+  color: black;
+  position: absolute;
+  right: 4rem;
+  text-align: center;
+  top: 1.5rem;
+  text-decoration: none;
+  padding: 1rem;
+}
+.modal-window div .modal-close:hover {
+  background-color: rgba(128, 128, 128, 0.55);
+}
+.modal-window div .modal-close i {
+  font-weight: bold;
+}
+.modal-window div .modalHeader {
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.modal-window div p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.modal-window div input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+.modal-window div .checkEmailText {
+  margin-top: 0.5rem;
+  color: red;
+  font-weight: bold;
+  font-size: 1.6rem !important;
+  display: none;
+}
+.modal-window div button {
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  padding: 1.5rem 2.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.modal-window div button:hover {
+  background-color: #ccc;
+  color: black;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -228,14 +310,14 @@ body {
 .page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox span i {
   font-size: 1.8rem;
 }
-.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox .page__right__main__BTN,
-.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textBox .page__right__main__BTN,
-.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textBox .page__right__main__BTN,
-.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textBox .page__right__main__BTN,
-.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textBox .page__right__main__BTN,
-.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textBox .page__right__main__BTN,
-.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox .page__right__main__BTN,
-.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox .page__right__main__BTN {
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox a .page__right__main__BTN,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox a .page__right__main__BTN {
   border: none;
   background-color: #4caf50;
   color: white;
@@ -244,15 +326,16 @@ body {
   font-size: 1.5rem;
   padding: 1rem 1.6rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
-.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox .page__right__main__BTN:hover,
-.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textBox .page__right__main__BTN:hover,
-.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textBox .page__right__main__BTN:hover,
-.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textBox .page__right__main__BTN:hover,
-.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textBox .page__right__main__BTN:hover,
-.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textBox .page__right__main__BTN:hover,
-.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox .page__right__main__BTN:hover,
-.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox .page__right__main__BTN:hover {
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__extraInfo__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__space .page__right__main__rules__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__extraInfo__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__amenties .page__right__main__rules__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__extraInfo__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__extraInfo .page__right__main__rules__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__extraInfo__textBox a .page__right__main__BTN:hover,
+.page .page__right .page__right__container .page__right__main .page__right__main__rules .page__right__main__rules__textBox a .page__right__main__BTN:hover {
   background-color: #ccc;
   color: black;
 }

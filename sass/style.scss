@@ -178,18 +178,22 @@ body {
                 font-size: 1.8rem;
               }
             }
-            .page__right__main__BTN {
-              border: none;
-              background-color: #4caf50;
-              color: white;
-              width: 33.33%;
-              font-family: "Raleway", sans-serif;
-              font-size: 1.5rem;
-              padding: 1rem 1.6rem;
-              margin-bottom: 1rem;
-              &:hover {
-                background-color: #ccc;
-                color: black;
+            a {
+              .page__right__main__BTN {
+                border: none;
+                background-color: #4caf50;
+                color: white;
+                width: 33.33%;
+                font-family: "Raleway", sans-serif;
+                font-size: 1.5rem;
+                padding: 1rem 1.6rem;
+                margin-bottom: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                  background-color: #ccc;
+                  color: black;
+                }
               }
             }
           }

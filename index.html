@@ -104,11 +104,6 @@
                   style="display: none"
                 />
                 <img
-                  src="image/diningroom.jpg"
-                  alt="Dining Room"
-                  style="display: none"
-                />
-                <img
                   src="image/bedroom.jpg"
                   alt="Bedroom"
                   style="display: none"
@@ -223,8 +218,35 @@
                   Subscribe to receive updates on available dates and special
                   offers.</span
                 >
-                <button class="page__right__main__BTN">Subscribe</button>
+                <a href="#open-modal">
+                  <button class="page__right__main__BTN">Subscribe</button>
+                </a>
               </div>
+              <!-- Modal Code -->
+              <div id="open-modal" class="modal-window">
+                <div>
+                  <a href="#" title="Close" class="modal-close"
+                    ><i class="fa fa-remove fa-2x"></i
+                  ></a>
+                  <span class="modalHeader">SUBSCRIBE</span>
+                  <p>
+                    Join our mailing list to receive updates on available dates
+                    and special offers.
+                  </p>
+                  <input
+                    class="modalEmail"
+                    type="email"
+                    placeholder="Enter e-mail"
+                    onkeyup="deleteEmailError()"
+                  />
+                  <span class="checkEmailText">Email is not valid</span>
+                  <button class="page__right__main__BTN modalBTN">
+                    Subscribe
+                  </button>
+                  <br />
+                </div>
+              </div>
+              <!-- End Modal Code -->
             </div>
           </div>
         </div>

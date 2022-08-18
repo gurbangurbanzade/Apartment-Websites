@@ -214,3 +214,20 @@ function myFunction(event) {
   console.log();
 }
 //End Slider
+//Modal Email Check
+let Email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+document.querySelector(".modalBTN").addEventListener("click", function () {
+  const modalInput = document.querySelector(".modalEmail");
+  if (!Email.test(modalInput.value)) {
+    document.querySelector(".checkEmailText").style.display = "block";
+  } else {
+  }
+});
+
+function deleteEmailError() {
+  if (document.querySelector(".checkEmailText").style.display == "block") {
+    document.querySelector(".checkEmailText").style.display = "none";
+  }
+}
+
+//End Modal Check
