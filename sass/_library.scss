@@ -8,6 +8,14 @@
   color: red;
   font-weight: bold;
 }
+.checkMessage,
+.checkEmail {
+  margin-top: -1rem;
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
 // Slider code
 .slideHover {
   filter: opacity(65%);
@@ -45,23 +53,25 @@
     top: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem 4rem;
+    padding: 0.5rem 4rem;
     background: white;
     .modal-close {
       color: black;
       position: absolute;
-      right: 4rem;
+      right: 3rem;
       text-align: center;
       top: 1.5rem;
       text-decoration: none;
-      // width: 4rem;
-      // height: 4rem;
-      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
       &:hover {
         background-color: rgba(128, 128, 128, 0.55);
       }
       i {
         font-weight: bold;
+        font-size: 2.5rem;
       }
     }
     .modalHeader {

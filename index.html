@@ -262,12 +262,30 @@
             <span class="page__right__footer__textContact"
               ><i class="fa-solid fa-envelope"></i> Email: mail@mail.com</span
             >
-            <form action="">
+            <form action="" class="messageForm">
               <span>Questions? Go ahead, ask them:</span>
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Email" />
-              <input type="text" placeholder="Message" />
-              <button class="page__right__main__BTN">Send a Message</button>
+              <input
+                type="text"
+                placeholder="Name"
+                onkeyup="deleteMessageError(this)"
+              />
+              <span class="checkMessage">This field is required</span>
+              <input
+                type="email"
+                placeholder="Email"
+                onkeyup="deleteMessageError(this)"
+              />
+              <span class="checkMessage">This field is required</span>
+              <span class="checkEmail">Email is not Valid</span>
+              <input
+                type="text"
+                placeholder="Message"
+                onkeyup="deleteMessageError(this)"
+              />
+              <span class="checkMessage">This field is required</span>
+              <button type="submit" class="page__right__main__BTN messageBTN">
+                Send a Message
+              </button>
             </form>
             <span>Powered by <a href="">Gurban Gurbanzade</a></span>
           </div>

@@ -10,7 +10,6 @@ const checkTextFormat = `
                 `;
 const time = new Date();
 const checkInInput = document.querySelector("#inputCheckIn");
-
 const checkOutInput = document.querySelector("#inputCheckOut");
 
 // Search Availabilty function start
@@ -27,15 +26,6 @@ searchBTN.addEventListener("click", function searchAvailaility(e) {
   )}-${checkOutInput.value.slice(2, 4)}-${checkOutInput.value.slice(0, 2)}`;
   //---------------------------------------------------
   for (let inputs of checkInputs) {
-    console.log(
-      new Date(
-        `${inputs.value.slice(4, 8)}-${inputs.value.slice(
-          2,
-          4
-        )}-${inputs.value.slice(0, 2)}`
-      )
-    );
-    console.log(time);
     if (
       inputs.value.length < 8 ||
       inputs.value.length > 8 ||
@@ -57,7 +47,7 @@ searchBTN.addEventListener("click", function searchAvailaility(e) {
     ) {
       if (inputs.value == "") {
         if (!inputs.nextElementSibling) {
-          inputs.insertAdjacentHTML("afterend", checkTextFormat);
+          inputs.insertAdjacentHTML("afterend", checkText);
         } else if (
           inputs.nextElementSibling.innerHTML == "Format is not valid"
         ) {
@@ -68,12 +58,11 @@ searchBTN.addEventListener("click", function searchAvailaility(e) {
         inputs.value = "";
       }
     } else if (new Date(checkInInputDate) >= new Date(checkOutInputDate)) {
-      console.log("salam");
       document
         .querySelector("#inputCheckOut")
         .insertAdjacentHTML("afterend", checkTextFormat);
       document.querySelector("#inputCheckIn").value = checkInInput.value;
-      // document.querySelector("#inputCheckOut").value = "";
+      document.querySelector("#inputCheckOut").value = "";
       break;
     }
   }
@@ -215,10 +204,11 @@ function myFunction(event) {
 }
 //End Slider
 //Modal Email Check
-let Email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-document.querySelector(".modalBTN").addEventListener("click", function () {
+let email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+document.querySelector(".modalBTN").addEventListener("click", function (e) {
+  e.preventDefault();
   const modalInput = document.querySelector(".modalEmail");
-  if (!Email.test(modalInput.value)) {
+  if (!email.test(modalInput.value)) {
     document.querySelector(".checkEmailText").style.display = "block";
   } else {
   }
@@ -231,3 +221,34 @@ function deleteEmailError() {
 }
 
 //End Modal Check
+//Message Check
+document.querySelector(".messageBTN").addEventListener("click", function (e) {
+  e.preventDefault();
+  const form = document.querySelector(".messageForm").children;
+  for (let input of form) {
+    if (input.tagName == "INPUT") {
+      if (input.value == "") {
+        input.nextElementSibling.style.display = "block";
+      } else if (
+        input.type == "email" &&
+        input.value !== "" &&
+        !email.test(input.value)
+      ) {
+        document.querySelector(".checkEmail").style.display = "block";
+      }
+
+      // console.log(input);
+    }
+  }
+});
+function deleteMessageError(e) {
+  console.log(e.type);
+  if (e.nextElementSibling.style.display == "block") {
+    e.nextElementSibling.style.display = "none";
+  }
+  if (e.type == "email") {
+    document.querySelector(".checkEmail").style.display = "none";
+  }
+}
+
+//End Message Check
