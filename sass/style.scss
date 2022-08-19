@@ -35,6 +35,7 @@ body {
     }
   }
   // Left side
+
   .page__left,
   .page__left2 {
     overflow-y: scroll;
@@ -129,6 +130,9 @@ body {
         font-size: 2rem;
       }
     }
+  }
+  .page__left2 {
+    display: none;
   }
   // End Left side
   //-----------------------------

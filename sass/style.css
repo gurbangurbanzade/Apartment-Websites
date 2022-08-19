@@ -267,6 +267,9 @@ body {
   font-weight: bold;
   font-size: 2rem;
 }
+.page .page__left2 {
+  display: none;
+}
 .page .page__right {
   margin-left: 26rem;
   width: 74rem;
