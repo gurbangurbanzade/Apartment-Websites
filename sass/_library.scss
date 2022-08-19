@@ -35,7 +35,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 9;
   visibility: hidden;
   opacity: 0;
   // pointer-events: none;
@@ -55,6 +55,7 @@
     transform: translate(-50%, -50%);
     padding: 0.5rem 4rem;
     background: white;
+    text-align: center;
     .modal-close {
       color: black;
       position: absolute;
@@ -98,7 +99,7 @@
       font-size: 1.6rem !important;
       display: none;
     }
-    button {
+    .modalBTN {
       border: none;
       background-color: #4caf50;
       color: white;
@@ -118,3 +119,16 @@
 }
 
 //End modal code
+//Responsive Click Menu
+.page__dark__BG {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 1;
+  display: none;
+}
+// End Responsive Click Menu

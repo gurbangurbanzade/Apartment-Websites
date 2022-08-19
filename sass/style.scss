@@ -23,14 +23,27 @@ body {
   border-left: 0.1rem solid #ccc;
   .page__navbar {
     display: none;
+    padding: 0rem !important;
+    .page__navbar__menuIcon {
+      cursor: pointer;
+      text-align: center;
+      padding: 1.5rem 1.7rem;
+      margin-right: 0rem !important;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.55);
+      }
+    }
   }
   // Left side
-  .page__left {
+  .page__left,
+  .page__left2 {
     overflow-y: scroll;
     position: fixed;
     background-color: #f1f1f1;
     width: 26rem;
     height: 100vh;
+    display: block;
+    // z-index: 0;
     .page__left__header {
       @include column;
       margin-left: 1.5rem;
@@ -92,6 +105,28 @@ body {
         &:hover {
           background-color: #ccc;
         }
+      }
+    }
+    .page__left__closeBTN {
+      color: black;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+      display: none;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.55);
+      }
+      i {
+        font-weight: bold;
+        font-size: 2rem;
       }
     }
   }

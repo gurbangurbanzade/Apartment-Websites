@@ -2,7 +2,6 @@
   .page {
     width: auto;
     overflow-x: auto;
-
     .page__navbar {
       display: block;
       background-color: black;
@@ -25,7 +24,8 @@
         margin-right: 1.6rem;
       }
     }
-    .page__left {
+    .page__left,
+    .page__left2 {
       display: none;
     }
     .page__right {
@@ -34,7 +34,16 @@
       margin-top: 8rem;
     }
   }
+  .modal-window {
+    div {
+      width: 75%;
+      .modalBTN {
+        width: 13rem !important;
+      }
+    }
+  }
 }
+
 @media (max-width: 600px) {
   .page__right__main__BTN {
     width: 100% !important;
@@ -48,6 +57,11 @@
   .page__right__main__space__textBox {
     span {
       font-size: 1.6rem !important;
+    }
+  }
+  .modal-window {
+    div {
+      width: 70%;
     }
   }
 }

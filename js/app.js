@@ -252,3 +252,26 @@ function deleteMessageError(e) {
 }
 
 //End Message Check
+//Responsive Menu Click
+const pageLeft = document.querySelector(".page__left2");
+const darkBG = document.querySelector(".page__dark__BG");
+const closePageLeftBTN = document.querySelector(".page__left__closeBTN");
+document
+  .querySelector(".page__navbar__menuIcon")
+  .addEventListener("click", function () {
+    pageLeft.style.display = "block";
+    pageLeft.style.zIndex = "8";
+    darkBG.style.display = "block";
+    closePageLeftBTN.style.display = "flex";
+  });
+darkBG.addEventListener("click", () => {
+  pageLeft.style.display = "none";
+  darkBG.style.display = "none";
+  closePageLeftBTN.style.display = "none";
+});
+closePageLeftBTN.addEventListener("click", () => {
+  pageLeft.style.display = "none";
+  darkBG.style.display = "none";
+  closePageLeftBTN.style.display = "none";
+});
+//Responsive Menu Click
