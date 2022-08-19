@@ -253,7 +253,7 @@ function deleteMessageError(e) {
 
 //End Message Check
 //Responsive Menu Click
-const pageLeft = document.querySelector(".page__left2");
+const pageLeft = document.querySelector(".page__left");
 const darkBG = document.querySelector(".page__dark__BG");
 const closePageLeftBTN = document.querySelector(".page__left__closeBTN");
 document

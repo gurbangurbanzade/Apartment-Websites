@@ -36,8 +36,7 @@ body {
   }
   // Left side
 
-  .page__left,
-  .page__left2 {
+  .page__left {
     overflow-y: scroll;
     position: fixed;
     background-color: #f1f1f1;
@@ -131,9 +130,7 @@ body {
       }
     }
   }
-  .page__left2 {
-    display: none;
-  }
+
   // End Left side
   //-----------------------------
   // Right side
