@@ -66,60 +66,8 @@ searchBTN.addEventListener("click", function searchAvailaility(e) {
       break;
     }
   }
-  //---------------------------------------------------
-  // for (let inputs of checkInputs) {
-  //   if (
-  //     inputs.value.length < 8 ||
-  //     inputs.value.length > 8 ||
-  //     !Number(inputs.value)
-  //   ) {
-  //     if (inputs.value == "") {
-  //       if (!inputs.nextElementSibling) {
-  //         inputs.insertAdjacentHTML("afterend", checkText);
-  //       } else if (
-  //         inputs.nextElementSibling.innerHTML == "Format is not valid"
-  //       ) {
-  //         inputs.nextElementSibling.innerHTML = "This field is required";
-  //       }
-  //     } else {
-  //       inputs.insertAdjacentHTML("afterend", checkTextFormat);
-  //       inputs.value = "";
-  //     }
-  //   } else if (inputs.value.slice(4, 8) < time.getFullYear()) {
-  //     inputs.insertAdjacentHTML("afterend", checkTextFormat);
-  //     inputs.value = "";
-  //   } else if (inputs.value.slice(4, 8) == time.getFullYear()) {
-  //     if (
-  //       inputs.value.slice(2, 4) > 12 ||
-  //       inputs.value.slice(2, 4) <= time.getMonth() + 1
-  //     ) {
-  //       if (
-  //         inputs.value.slice(2, 4) == time.getMonth() + 1 &&
-  //         (inputs.value.slice(0, 2) > 31 ||
-  //           inputs.value.slice(0, 2) < time.getDate())
-  //       ) {
-  //         inputs.insertAdjacentHTML("afterend", checkTextFormat);
-  //         inputs.value = "";
-  //       } else if (inputs.value.slice(2, 4) < time.getMonth() + 1) {
-  //         inputs.insertAdjacentHTML("afterend", checkTextFormat);
-  //         inputs.value = "";
-  //       }
-  //     } else {
-  //       if (
-  //         inputs.value.slice(2, 4) == time.getMonth() + 1 &&
-  //         (inputs.value.slice(0, 2) > 31 ||
-  //           inputs.value.slice(0, 2) < time.getDate())
-  //       ) {
-  //         inputs.insertAdjacentHTML("afterend", checkTextFormat);
-  //         inputs.value = "";
-  //       }
-  //     }
-  //   }
-  // }
-  //------------------------------------
-  // Date Difference  Control
 });
-// End Search Availabilty function start
+// End Search Availabilty
 // Input Error Delete Function Start
 function deleteError(e) {
   if (e.nextElementSibling) {
@@ -127,46 +75,6 @@ function deleteError(e) {
   }
 }
 // End Input Error Delete Function Start
-//-----------------------------------------
-// // Date Difference  Control
-// const checkInInput = document.querySelector("#inputCheckIn");
-// const checkOutInput = document.querySelector("#inputCheckOut");
-// // console.log(checkInInput);
-// if (
-//   1
-//   // checkInInput.value.length == 8 &&
-//   // checkOutInput.value.length == 8
-//   // &&
-//   // Number(checkInInput.value) &&
-//   // Number(checkOutInput.value)
-//   // &&
-//   // checkOutInput.value.slice(4, 8) >=
-//   //   checkInInput.value.slice(4, 8) >=
-//   //   time.getFullYear() &&
-//   // checkOutInput.value.slice(2, 4) >=
-//   //   checkInInput.value.slice(2, 4) >=
-//   //   time.getMonth() + 1 &&
-//   // checkOutInput.value.slice(0, 2) >=
-//   //   checkInInput.value.slice(0, 2) >=
-//   //   time.getDate()
-// ) {
-//   console.log("Salam");
-// }
-
-// End Search form
-//
-// All form check
-// for (let input of form.children) {
-//   if (
-//     input.lastElementChild.tagName == "INPUT" &&
-//     input.lastElementChild.value == ""
-//   ) {
-//     input.innerHTML += checkText;
-//     console.log("salam", input);
-//   }
-// }
-// Check in/out input format check
-
 //--------------------------------------------------------------
 //Slider
 const photos = document.querySelector(
@@ -180,7 +88,6 @@ for (let photo of photos) {
   photo.addEventListener("click", function () {
     for (let photo of photos) {
       if (photo.children[0] !== this.children[0]) {
-        // photo.children[0].style.filter = "opacity(65%)";
         photo.children[0].classList.remove("slide");
         photo.children[0].classList.add("slideHover");
       } else {
@@ -203,6 +110,7 @@ function myFunction(event) {
   console.log();
 }
 //End Slider
+//--------------------------------------------------------------
 //Modal Email Check
 let email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 document.querySelector(".modalBTN").addEventListener("click", function (e) {
@@ -211,6 +119,8 @@ document.querySelector(".modalBTN").addEventListener("click", function (e) {
   if (!email.test(modalInput.value)) {
     document.querySelector(".checkEmailText").style.display = "block";
   } else {
+    document.querySelector(".modal-window").style.opacity = "0";
+    document.querySelector(".modal-window").style.visibility = "hidden";
   }
 });
 
@@ -221,6 +131,7 @@ function deleteEmailError() {
 }
 
 //End Modal Check
+//--------------------------------------------------------------
 //Message Check
 document.querySelector(".messageBTN").addEventListener("click", function (e) {
   e.preventDefault();
@@ -236,8 +147,6 @@ document.querySelector(".messageBTN").addEventListener("click", function (e) {
       ) {
         document.querySelector(".checkEmail").style.display = "block";
       }
-
-      // console.log(input);
     }
   }
 });
@@ -252,6 +161,7 @@ function deleteMessageError(e) {
 }
 
 //End Message Check
+//--------------------------------------------------------------
 //Responsive Menu Click
 const pageLeft = document.querySelector(".page__left");
 const darkBG = document.querySelector(".page__dark__BG");
@@ -275,3 +185,18 @@ closePageLeftBTN.addEventListener("click", () => {
   closePageLeftBTN.style.display = "none";
 });
 //Responsive Menu Click
+//--------------------------------------------------------------
+//Responsive Left Side Zoom And Out
+function myFunction(x) {
+  if (x.matches) {
+    pageLeft.style.display = "block";
+    darkBG.style.display = "none";
+    closePageLeftBTN.style.display = "none";
+  } else {
+    pageLeft.style.display = "none";
+  }
+}
+let x = window.matchMedia("(min-width: 992px)");
+myFunction(x);
+x.addListener(myFunction);
+//End Responsive Left Side Zoom And Out
